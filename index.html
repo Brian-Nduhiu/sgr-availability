@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple HTML Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta name="description" content="A simple HTML page with a header, main content, and footer.">
+    <meta name="keywords" content="HTML, CSS, JavaScript, example">
+    <meta name="author" content="Your Name">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        p {
+            line-height: 1.6;
+            color: #555;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        @media (max-width: 600px) {
+            header, footer {
+                text-align: center;
+            }
+            .container {
+                padding: 0 10px;
+            }
+        }
+        @media (min-width: 601px) {
+            header, footer {
+                text-align: left;
+            }
+            .container {
+                padding: 0 20px;
+            }
+        }
+        .dark-mode {
+            background-color: #121212;
+            color: #ffffff;
+        }
+        .dark-mode header, .dark-mode footer {
+            background-color: #1e1e1e;
+        }
+        .dark-mode a {
+            color: #bb86fc;
+        }
+        .dark-mode .button {
+            background-color: #bb86fc;
+            color: #121212;
+        }
+        .dark-mode .button:hover {
+            background-color: #3700b3;
+        }
+        .dark-mode h1, .dark-mode h2 {
+            color: #ffffff;
+        }
+        .dark-mode p {
+            color: #e0e0e0;
+        }
+        .dark-mode .container {
+            background-color: #121212;
+        }
+        .dark-mode .container p {
+            color: #e0e0e0;
+        }
+        .dark-mode .container h1, .dark-mode .container h2 {
+            color: #ffffff;
+        }
+        .dark-mode .container a {
+            color: #bb86fc;
+        }
+        .dark-mode .container a:hover {
+            color: #3700b3;
+        }
+        .dark-mode .container .button {
+            background-color: #bb86fc;
+            color: #121212;
+        }
+        .dark-mode .container .button:hover {
+            background-color: #3700b3;
+        }
+        .dark-mode .container header, .dark-mode .container footer {
+            background-color: #1e1e1e;
+        }
+        .dark-mode .container header h1, .dark-mode .container footer h2 {
+            color: #ffffff;
+        }
+        .dark-mode .container header p, .dark-mode .container footer p {
+            color: #e0e0e0;
+        }
+        .dark-mode .container header a, .dark-mode .container footer a {
+            color: #bb86fc;
+        }
+        .dark-mode .container header a:hover, .dark-mode .container footer a:hover {
+            color: #3700b3;
+        }
+        .dark-mode .container header .button, .dark-mode .container footer .button {
+            background-color: #bb86fc;
+            color: #121212;
+        }
+        .dark-mode .container header .button:hover, .dark-mode .container footer .button:hover {
+            background-color: #3700b3;
+        }
+        .dark-mode .container header h1, .dark-mode .container footer h2 {
+            color: #ffffff;
+        }
+        .dark-mode .container header p, .dark-mode .container footer p {
+            color: #e0e0e0;
+        }
+        .dark-mode .container header a, .dark-mode .container footer a {
+            color: #bb86fc;
+        }
+        .dark-mode .container header a:hover, .dark-mode .container footer a:hover {
+            color: #3700b3;
+        }
+        .dark-mode .container header .button, .dark-mode .container footer .button {
+            background-color: #bb86fc;
+            color: #121212;
+        }
+        .dark-mode .container header .button:hover, .dark-mode .container footer .button:hover {
+            background-color: #3700b3;
+        }
+        .dark-mode .container header h1, .dark-mode .container footer h2 {
+            color: #ffffff;
+        }
+        .dark-mode .container header p, .dark-mode .container footer p {
+            color: #e0e0e0;
+        }
+        .dark-mode .container header a, .dark-mode .container footer a {
+            color: #bb86fc;
+        }
+        .dark-mode .container header a:hover, .dark-mode .container footer a:hover {
+            color: #3700b3;
+        }
+        .dark-mode .container header .button, .dark-mode .container footer .button {
+            background-color: #bb86fc;
+            color: #121212;
+        }
+        .dark-mode .container header .button:hover, .dark-mode .container footer .button:hover {
+            background-color: #3700b3;
+        }
+        .dark-mode .container header h1, .dark-mode .container footer h2 {
+            color: #ffffff;
+        }
+        .dark-mode .container header p, .dark-mode .container footer p {
+            color: #e0e0e0;
+        }
+        .dark-mode .container header a, .dark-mode .container footer a {
+            color: #bb86fc;
+        }
+        .dark-mode .container header a:hover, .dark-mode .container footer a:hover {
+            color: #3700b3;
+        }
+        </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Welcome to My Simple HTML Page</h1>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <h2>About This Page</h2>
+            <p>This is a simple HTML page designed to demonstrate basic HTML, CSS, and JavaScript usage. It includes a header, main content area, and footer.</p>
+            <p>Feel free to explore the code and modify it as you wish!</p>
+            <a href="#" class="button">Learn More</a>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Your Name. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        // JavaScript to toggle dark mode
+        const toggleDarkMode = () => {
+            document.body.classList.toggle('dark-mode');
+        };
+
+        // Add a button to toggle dark mode
+        const button = document.createElement('button');
+        button.textContent = 'Toggle Dark Mode';
+        button.onclick = toggleDarkMode;
+        document.querySelector('header .container').appendChild(button);
+        // Optional: Save dark mode preference in localStorage
+        const savedMode = localStorage.getItem('dark-mode');
+        if (savedMode === 'enabled') {
+            document.body.classList.add('dark-mode');
+        }
+        button.addEventListener('click', () => {
+            const isDarkMode = document.body.classList.contains('dark-mode');
+            localStorage.setItem('dark-mode', isDarkMode ? 'enabled' : 'disabled');
+        });
+    </script>
+</body>
+</html>
